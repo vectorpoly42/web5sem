@@ -1,0 +1,83 @@
+/*фон*/
+body {
+  background-image: url(img/background.jpg);
+  font: 1em 'Open Sans', sans-serif;
+}
+
+ /*для расположения меню по центру*/
+.nav-menu {
+  text-align: center;
+  list-style-type: none;
+}
+
+/*стиль всех ссылок в проекте*/
+a {
+  text-decoration: none;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+}
+/*форматирование списка ссылок*/
+li {
+  display:inline-block;
+  padding: 20px;
+  text-align: center;
+}
+
+/*вид текст ссылок в списке*/
+li .a {
+  font-family: sans-serif;
+}
+
+ /*текст в main*/
+section {
+  text-align: center;
+  word-wrap: break-word;
+  }
+
+/*-------якорные ссылки в hobbies-----*/
+.first {
+  margin-left: 360px;
+  font-style: italic;
+}
+/*-----------------------------------*/
+
+ /*форматирование таблицы в education*/
+.table {
+  width: 650px;
+  margin: auto;
+  text-align: center;
+}
+
+/*вопросы теста*/
+.testbjd{
+    text-align: center;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/*кнопки отправки и очистки формы*/
+.buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*элементы формы связи*/
+.contactform {
+  border-style: outset;
+  border-width: medium;
+  border-color: #6495ED;
+  background: #b7c2ff;
+  opacity: 0.8;
+  text-align: center;
+  font-weight: bold;
+  width: 550px;
+  margin-left: 650px;
+  height: 470px;
+  }
+
+
+
+.head1 {
+  margin-bottom: 30px;
+}

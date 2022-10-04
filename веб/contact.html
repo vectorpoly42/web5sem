@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Связаться с Полиной по почте</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+</head>
+<body>
+  <nav>
+    <ul>
+      <div class="nav-menu">
+        <li><a href="main.html">Главная страница </a></li>
+        <li><a href="aboutme.html">Обо мне </a></li>
+        <li><a href="hobbies.html">Мои интересы </a></li>
+        <li><a href="education.html">Учеба </a></li>
+        <li><a href="photoalbum.html">Фотоальбом </a></li>
+        <li><a href="contact.html">Контакт </a></li>
+        <li><a href="testbjd.html">Тест по дисциплине "Безопасность жизнедеятельности" </a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <div class="contactform">
+
+    <form method="post" action="mailto: vectorpoly42@gmail.com">
+
+      <h2>Форма обратной связи</h2>
+
+<div class="head1">
+  <b>Напишите мне на почту, если захотите связаться :)</b>
+</div>
+
+
+      <div class="form1">
+        <label for="name"> Ваше имя: </label>
+        <input type="text" placeholder="Введите ФИО" id="name" required>
+      </div>
+
+      <div class="form2">
+        <p>Укажите ваш пол:</p>
+        <p><input type="radio" name="gen" value="male">Мужской</p>
+        <p><input type="radio" name="gen" value="female">Женский</p>
+      </div>
+
+      <div class="form3">
+        <p>Укажите ваш возраст</p>
+        <select name="age">
+          <option value="<14">Меньше 14</option>
+          <option value="14-17">14-17</option>
+          <option value="18-24">18-24</option>
+          <option value="25-35">25-35</option>
+          <option value=">35">Больше 35</option>
+        </select>
+
+      </div>
+
+      <div class="form4">
+        <p>Укажите адрес электронной почты, чтобы я могла вам написать: </p>
+        <input type="text" placeholder="Напишите свой email" id="email" required>
+      </div>
+    <div class="buttons">
+      <input type="submit">
+      <input type="reset" value="Очистить форму">
+    </div>
+  </form>
+</div>
+
+
+</body>
+</html>
