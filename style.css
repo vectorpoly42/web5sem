@@ -4,7 +4,7 @@ body {
   font: 1em 'Open Sans', sans-serif;
 }
 
- /*для расположения меню по центру*/
+/*для расположения меню по центру*/
 .nav-menu {
   text-align: center;
   list-style-type: none;
@@ -29,20 +29,30 @@ li .a {
   font-family: sans-serif;
 }
 
- /*текст в main*/
+/*текст в main*/
 section {
   text-align: center;
   word-wrap: break-word;
-  }
+}
 
 /*-------якорные ссылки в hobbies-----*/
 .first {
-  margin-left: 360px;
+  margin-left: 880px;
   font-style: italic;
 }
+
+.imageh {
+  display: inline-block;
+  margin: 20px;
+  }
+
+.myhobbies {
+  text-align: center;
+}
+
 /*-----------------------------------*/
 
- /*форматирование таблицы в education*/
+/*форматирование таблицы в education*/
 .table {
   width: 650px;
   margin: auto;
@@ -51,7 +61,7 @@ section {
 
 /*вопросы теста*/
 .testbjd{
-    text-align: center;
+  text-align: center;
   font-weight: bold;
   margin-top: 30px;
 }
@@ -74,12 +84,8 @@ section {
   width: 550px;
   margin-left: 650px;
   height: 480px;
-  }
-
-.head1 {
-  margin-bottom: 30px;
 }
-=======
+
 .head1 {
   margin-bottom: 30px;
 }
@@ -89,10 +95,10 @@ section {
 
 .boxContainer{
   display: inline-block;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 .boxItem {
   margin: 20px;
