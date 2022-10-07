@@ -77,7 +77,36 @@ section {
   }
 
 
+<<<<<<< HEAD
 
 .head1 {
   margin-bottom: 30px;
 }
+=======
+.head1 {
+  margin-bottom: 30px;
+}
+
+
+/*-------фотоальбом------**/
+
+.boxContainer{
+  display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+.boxItem {
+  margin: 20px;
+}
+
+.image {
+  display: inline-block;
+  transition: 1s;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+>>>>>>> 3318b97e8d395a3ba1a0a4ca8c09308c9643c365
