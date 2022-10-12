@@ -51,10 +51,6 @@ section {
   .text {
     text-align: center; }
 
-.fourth {
-  margin-left: 880px;
-}
-
 .imageh {
   display: inline-block;
   margin: 20px;
@@ -66,14 +62,19 @@ section {
 
 /*-----------------------------------*/
 
-/*форматирование таблицы в education*/
+/*education*/
 .table {
   width: 650px;
   margin: auto;
   text-align: center;
 }
 
-/*вопросы теста*/
+.imageed {
+  display: inline-block;
+  text-align: center;
+}
+
+/*тест*/
 .testbjd{
   text-align: center;
   font-weight: bold;
