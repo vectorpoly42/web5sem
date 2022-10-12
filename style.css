@@ -6,7 +6,19 @@ body {
 
 /*для расположения меню по центру*/
 .nav-menu {
+  display: flex;
+  justify-content: center;
   text-align: center;
+  list-style-type: none;
+}
+
+.spisok {
+  display: flex;
+  justify-content: center;
+  text-align: center list-style-type: none;
+}
+
+.spisok li {
   list-style-type: none;
 }
 
@@ -17,10 +29,18 @@ a {
   font-style: italic;
   font-weight: bold;
 }
+
+a:link, a:visited {
+  color: black;
+}
+
+a:hover {
+  color: red;
+}
+
 /*форматирование списка ссылок*/
-li{
-  display:inline-block;
-  padding: 20px;
+li {
+  padding: 10px;
   text-align: center;
 }
 
@@ -37,31 +57,51 @@ section {
 
 /*-------hobbies-----*/
 .first {
-  margin-left: 880px;
+  text-align: center;
   font-style: italic;
 }
 
 .second {
-  margin-left: 880px;
+  text-align: center;
 }
 
 .third {
-  margin-left: 880px;
-  }
-  .text {
-    text-align: center; }
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
 
 .imageh {
   display: inline-block;
   margin: 20px;
-  }
+}
 
 .myhobbies {
   text-align: center;
 }
 
-/*-----------------------------------*/
+.works {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+}
 
+.books {
+  font-size: 1.17em;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.books li {
+  list-style-type: square;
+}
+
+/*-----------------------------------*/
 /*education*/
 .table {
   width: 650px;
@@ -74,8 +114,13 @@ section {
   text-align: center;
 }
 
+.ImagesEducation {
+  text-align: center;
+  margin-top: 20px;
+}
+
 /*тест*/
-.testbjd{
+.testbjd {
   text-align: center;
   font-weight: bold;
   margin-top: 30px;
@@ -105,10 +150,8 @@ section {
   margin-bottom: 30px;
 }
 
-
 /*-------фотоальбом------**/
-
-.boxContainer{
+.boxContainer {
   display: inline-block;
   justify-content: center;
   align-items: center;
