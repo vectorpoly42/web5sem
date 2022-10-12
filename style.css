@@ -18,7 +18,7 @@ a {
   font-weight: bold;
 }
 /*форматирование списка ссылок*/
-li {
+li{
   display:inline-block;
   padding: 20px;
   text-align: center;
@@ -35,10 +35,24 @@ section {
   word-wrap: break-word;
 }
 
-/*-------якорные ссылки в hobbies-----*/
+/*-------hobbies-----*/
 .first {
   margin-left: 880px;
   font-style: italic;
+}
+
+.second {
+  margin-left: 880px;
+}
+
+.third {
+  margin-left: 880px;
+  }
+  .text {
+    text-align: center; }
+
+.fourth {
+  margin-left: 880px;
 }
 
 .imageh {
