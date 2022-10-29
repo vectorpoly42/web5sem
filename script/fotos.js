@@ -1,12 +1,12 @@
 var path = "img/";
 fotos = new Array(
-  path + "Ann.jpg", path + "nauchnoye.jpg", path + "sky1.jpg",
+  path + "Ann.jpg", path + "fly.jpg", path + "sky1.jpg",
   path + "fog.jpg", path + "randomkit.jpg", path + "sky2.jpg",
   path + "ija.jpg", path + "randomkitagain.jpg", path + "sky3.jpg",
   path + "mendKarine.jpg", path + "rinat.jpg", path + "rafulik.jpg"
 );
 
-titles = new Array("Аня", "Научное", "Небо", "Туман" , "Кошечка", "Небо №2", "Еда","Кошечка №2", "Небо №3", "Моя лучшая подруга", "Рука", "Раф");
+titles = new Array("Аня", "Флай", "Небо", "Туман" , "Кошечка", "Небо №2", "Еда","Кошечка №2", "Небо №3", "Моя лучшая подруга", "Рука", "Раф");
 
     function fotoTable (n, m){       //i-номер элемента, с которого начнется отображение; n-количество элементов для отображения
         i=0;
