@@ -41,18 +41,18 @@
 
       <div class="form2">
         <p>Укажите ваш пол:</p>
-        <p><input type="radio" name="gen" value="male">Мужской</p>
-        <p><input type="radio" name="gen" value="female">Женский</p>
+        <p><input type="radio" name="Пол" id="gen1" value="male">Мужской</p>
+        <p><input type="radio" name="Пол" id="gen2" value="female">Женский</p>
       </div>
 
       <div class="form3">
         <p>Укажите ваш возраст</p>
-        <select name="age">
-          <option value="<14">Меньше 14</option>
+        <select id="age" name="Возраст">
+          <option value=">14"Меньше 14</option>
           <option value="14-17">14-17</option>
           <option value="18-24">18-24</option>
           <option value="25-35">25-35</option>
-          <option value=">35">Больше 35</option>
+          <option value="<35">Больше 35</option>
         </select>
 
       </div>
@@ -63,6 +63,9 @@
       <div class="form5">
         <p>Укажите адрес электронной почты, чтобы я могла вам написать: </p>
         <input type="text" placeholder="Напишите свой email" id="email" required>
+        <div class="form6">
+          <p>Введите свой телефон для связи: </p>
+          <input type="text" placeholder="Ваш номер телефона" id="phone" required>
       </div>
       <div class="buttons">
         <input type="submit">
