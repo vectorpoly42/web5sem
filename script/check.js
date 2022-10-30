@@ -1,27 +1,4 @@
 function checkcontact() {
-<<<<<<< HEAD
-  var fields = Array(document.getElementById('fio'),
-                    document.getElementById('gen1'),
-                    document.getElementById('gen2'),
-                    document.getElementById('age'),
-                    document.getElementById('message'),
-                    document.getElementById('mail'));
-
-var m - new String();
-
-if(!fields[1].checked && !fields[2].checked) {
-  m+=fields[2].name + ",";
-  fields[1].focus();
-}
-for (i=3; i<6; i++)
-  if (fields[i].value===""){
-    m = m + fields[i].name + ",";
-    fields[i].focus();
-  }
-
-  if (m!=0) return "Поля" + m + "не заполнены.";
-  else return "\n";
-=======
   var fields = [ document.getElementById('name'),
                  document.getElementById('gen1'),
                  document.getElementById('gen2'),
@@ -53,5 +30,4 @@ for (i=3; i<6; i++)
     alert("Поля " + m.join(', ') + " не заполнены.");
     return false;
   }
->>>>>>> 5f8de634c4522a86d22160e4d04f4ad3c68eb0b2
 }
