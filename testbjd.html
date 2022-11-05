@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <title>Тест по дисциплине "Безопасность жизнедеятельности"</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script/check.js"></script>
 </head>
 
 <body>
@@ -26,16 +27,16 @@
     <h2>Тест по дисциплине "Безопасность жизнедеятельности"</h2>
   </div>
 
-  <form method="post" action="mailto: vectorpoly42@gmail.com">
+  <form method="post" onsubmit="return checktest();" action="sent.html">
     <div class="testbjd">
       <div class="quest1">
         <label for="name">Имя пользователя:</label>
-        <input type="text" placeholder="Введите ФИО" id="name" required>
+        <input type="text" placeholder="Введите ФИО" id="namet">
       </div>
 
       <div class="quest2">
         <p>Выберите вашу группу</p>
-        <select name="Group">
+        <select name="Group" id="group">
           <optgroup label="1 курс">
             <option value="1">ИТ/б-22-1-о </option>
             <option value="2">ИТ/б-22-2-о </option>
@@ -68,33 +69,30 @@
         <b>
           <p>Вопрос 1. Повседневная деятельность и отдых, способ существования человека:</p>
         </b>
-        <p><textarea rows="3" cols="20" name="answer1" placeholder="Ваш ответ"></textarea></p>
+        <p><textarea rows="3" cols="20" name="answer1" placeholder="Ваш ответ" id="q1"></textarea></p>
       </div>
 
       <div class="quest4">
         <b>
           <p>Вопрос 2. Сфера технических изобретений:</p>
         </b>
-        <p><input type="radio" name="answer2" value="Technosphera">Техносфера</p>
-        <p><input type="radio" name="answer2" value="Noosphera">Ноосфера</p>
-        <p><input type="radio" name="answer2" value="Biosphera">Биосфера</p>
+        <p><input type="radio" name="answer2" value="Technosphera" id="ans21">Техносфера</p>
+        <p><input type="radio" name="answer2" value="Noosphera" id="ans22">Ноосфера</p>
+        <p><input type="radio" name="answer2" value="Biosphera" id="ans23">Биосфера</p>
       </div>
 
       <div class="quest5">
         <b>
           <p>Вопрос 3. Средняя температура тела человека:</p>
         </b>
-        <select name="answer3">
+        <select name="answer3" id="q3">
           <option value="36.0">36.0</option>
           <option value="36.6">36.6</option>
         </select>
       </div>
     </div>
-
-
-
-    <div class="buttons">
-      <input type="submit">
+ <div class="buttons">
+      <input type="submit" value="Отправить">
       <input type="reset" value="Очистить форму">
     </div>
   </form>
