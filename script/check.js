@@ -95,3 +95,15 @@ function checkPhone(){
     if (!flag) return "Некорректный номер телефона.\n";
     else return "";
 }
+
+function amountWords() {
+
+var el = document.getElementById("q1");
+
+el.forEach((x) => x.parentNode.style.backgroundColor = null);
+
+  if (el.value.split(' ').length < 31) {
+    return "Ответ должен быть не менее 30 слов! \n";
+    el.parentNode.style.backgroundColor = 'red';  }
+  else return "";
+  }

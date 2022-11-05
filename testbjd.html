@@ -27,7 +27,7 @@
     <h2>Тест по дисциплине "Безопасность жизнедеятельности"</h2>
   </div>
 
-  <form method="post" onsubmit="return checktest();" action="sent.html">
+  <form method="post" onsubmit="return checktest(); amountWords(); " action="sent.html">
     <div class="testbjd">
       <div class="quest1">
         <label for="name">Имя пользователя:</label>
@@ -69,16 +69,16 @@
         <b>
           <p>Вопрос 1. Повседневная деятельность и отдых, способ существования человека:</p>
         </b>
-        <p><textarea rows="3" cols="20" name="answer1" placeholder="Ваш ответ" id="q1"></textarea></p>
+        <p><textarea rows="3" cols="20" name="answer1" id="q1" placeholder="Ваш ответ"></textarea></p>
       </div>
 
       <div class="quest4">
         <b>
           <p>Вопрос 2. Сфера технических изобретений:</p>
         </b>
-        <p><input type="radio" name="answer2" value="Technosphera" id="ans21">Техносфера</p>
-        <p><input type="radio" name="answer2" value="Noosphera" id="ans22">Ноосфера</p>
-        <p><input type="radio" name="answer2" value="Biosphera" id="ans23">Биосфера</p>
+        <p><input type="radio" name="answer2" id="ans21" value="Technosphera" >Техносфера</p>
+        <p><input type="radio" name="answer2" id="ans22" value="Noosphera" >Ноосфера</p>
+        <p><input type="radio" name="answer2" id="ans23" value="Biosphera" >Биосфера</p>
       </div>
 
       <div class="quest5">
