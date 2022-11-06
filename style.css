@@ -12,8 +12,6 @@ body {
   list-style-type: none;
 }
 
-
-
 /*стиль всех ссылок в проекте*/
 a {
   text-decoration: none;
@@ -153,7 +151,7 @@ section {
 }
 
 img {
-  text-align:center;
+  text-align: center;
 }
 
 table {
