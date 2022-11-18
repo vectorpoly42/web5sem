@@ -162,3 +162,8 @@ table {
 figcaption {
   text-align: center;
 }
+
+.nav-menu > li > ul {
+  padding: 0;
+  list-style-type: none;
+}
