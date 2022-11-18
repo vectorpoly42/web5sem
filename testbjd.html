@@ -9,6 +9,7 @@
   <script src="script/check.js"></script>
   <script src="script/submenu.js"></script>
   <script src="script/menu.js"></script>
+  <script src="script/clock.js"></script>
 </head>
 
 <body>
@@ -25,6 +26,10 @@
       </div>
     </ul>
   </nav>
+  <div class="doc_time">
+    <span id="doc_time"></span>
+    <script>clock();</script>
+  </div>
   <div class="HeaderTest" align=center>
     <h2>Тест по дисциплине "Безопасность жизнедеятельности"</h2>
   </div>
@@ -98,6 +103,7 @@
       <input type="reset" value="Очистить форму">
     </div>
   </form>
+
 </body>
 
 </html>

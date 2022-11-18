@@ -167,3 +167,12 @@ figcaption {
   padding: 0;
   list-style-type: none;
 }
+
+.doc_time {
+  font-family: 'Share Tech Mono', monospace;
+   color: #8b00ff;
+   text-align: center;
+   left: 50%;
+   top: 50%;
+   text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+}

@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="script/submenu.js"></script>
   <script src="script/menu.js"></script>
+  <script src="script/clock.js"></script>
 </head>
 
 <body>
@@ -35,7 +36,10 @@
         <p> Опыт работы: разнообразный. Сейчас работаю техническим специалистом в службе поддержки пользователей.</p>
         <p> Я очень люблю животных, особенно собак. На фото мои собачки, Джаз(справа) и Флай(слева).</p>
         <img src="img\dogs.jpg" width="500px" height="500px">
-
+        <div class="doc_time">
+          <span id="doc_time"></span>
+          <script>clock();</script>
+        </div>
       </em></h4>
   </section>
 </body>
