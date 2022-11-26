@@ -10,6 +10,7 @@
   <script src="script/submenu.js"></script>
   <script src="script/menu.js"></script>
   <script src="script/clock.js"></script>
+  <script src="script/calendar.js"></script>
 </head>
 
 <body>
@@ -55,14 +56,9 @@
       </div>
 
       <div class="form3">
-        <p>Укажите ваш возраст</p>
-        <select name="age" id="age">
-          <option value="<14">Меньше 14</option>
-          <option value="14-17">14-17</option>
-          <option value="18-24">18-24</option>
-          <option value="25-35">25-35</option>
-          <option value=">35">Больше 35</option>
-        </select>
+        <p>Укажите вашу дату рождения</p>
+         <input class="notFocus" name="Дата рождения" type="text" size="35" onfocus="show(this);"
+         oninput="writeDate();" id="birthDate" placeholder="Дата рождения"><br>
 
       </div>
       <div class="form4">
