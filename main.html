@@ -9,6 +9,7 @@
   <script src="script/submenu.js"></script>
   <script src="script/menu.js"></script>
   <script src="script/clock.js"></script>
+  <script src="script/cookie.js"></script>
 </head>
 
 <body>
@@ -24,10 +25,19 @@
         <li><a href="photoalbum.html">Фотоальбом </a></li>
         <li><a href="contact.html">Контакт </a></li>
         <li><a href="testbjd.html">Тест по дисциплине "Безопасность жизнедеятельности" </a></li>
+        <li><a href="history.html">История посещений </a></li>
       </div>
     </ul>
   </nav>
-
+  <script>
+    setCookie("main")
+  </script>
+  <script>
+    setLS("main")
+  </script>
+  <script>
+    setLL("main")
+  </script>
   <section>
     <h1>Юрьева Полина Витальевна</h1>
     <h2>ИС/б-20-2-о<h2>
@@ -37,10 +47,12 @@
         </h3>
         <img src="img\me.jpg" width="320px" height="400px">
   </section>
-<div class="doc_time">
-  <span id="doc_time"></span>
-  <script>clock();</script>
-</div>
+  <div class="doc_time">
+    <span id="doc_time"></span>
+    <script>
+      clock();
+    </script>
+  </div>
 
 </body>
 

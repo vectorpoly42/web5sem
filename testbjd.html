@@ -10,6 +10,7 @@
   <script src="script/submenu.js"></script>
   <script src="script/menu.js"></script>
   <script src="script/clock.js"></script>
+  <script src="script/cookie.js"></script>
 </head>
 
 <body>
@@ -18,17 +19,33 @@
       <div class="nav-menu">
         <li><a href="main.html">Главная страница </a></li>
         <li><a href="aboutme.html">Обо мне </a></li>
-        <script>printMenu()</script>
+        <script>
+          printMenu()
+        </script>
         <li><a href="education.html">Учеба </a></li>
         <li><a href="photoalbum.html">Фотоальбом </a></li>
         <li><a href="contact.html">Контакт </a></li>
         <li><a href="testbjd.html">Тест по дисциплине "Безопасность жизнедеятельности" </a></li>
+        <li><a href="history.html">История посещений </a></li>
       </div>
     </ul>
   </nav>
+
+  <script>
+    setCookie("testbjd")
+  </script>
+  <script>
+    setLS("testbjd")
+  </script>
+  <script>
+    setLL("testbjd")
+  </script>
+
   <div class="doc_time">
     <span id="doc_time"></span>
-    <script>clock();</script>
+    <script>
+      clock();
+    </script>
   </div>
   <div class="HeaderTest" align=center>
     <h2>Тест по дисциплине "Безопасность жизнедеятельности"</h2>

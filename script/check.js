@@ -124,3 +124,69 @@ function amountWords() {
 
   return true;
 }
+
+function validateAll() {
+
+  var string = checkcontact() + checkName() + checkPhone();
+  console.log(string);
+  if (string === "" || string === "\n\n") return true;
+  else return false;
+}
+
+function check() {
+  if (validateAll()) {
+    return true;
+  } else {
+    alert(string);
+    return false;
+  }
+}
+
+function validate(elem) {
+  var pree = document.getElementsByTagName('pre');
+  switch (elem.id) {
+    case "name":
+      if (checkName() != "\n") {
+        elem.className = "no";
+        pree[0].style.display = "inline";
+      } else {
+        elem.className = "yes";
+        pree[0].style.display = "none";
+      }
+      break
+    case "email":
+
+      if (elem.value === "") {
+        elem.className = "no";
+        pree[1].style.display = "inline";
+      } else {
+        elem.className = "yes";
+        pree[1].style.display = "none";
+      }
+      break
+    case "mobile":
+      if (checkPhone() !== "") {
+        elem.className = "no";
+        pree[2].style.display = "inline";
+      } else {
+        elem.className = "yes";
+        pree[2].style.display = "none";
+      }
+      break
+
+  }
+  var e1 = document.getElementById("name").className;
+  var e2 = document.getElementById("email").className;
+  var e3 = document.getElementById("mobile").className;
+  var s = document.getElementById("submit");
+}
+
+function checkSubmit() {
+  var sub = document.getElementById('submit');
+  if (validateAll()) {
+    sub.disabled = false;
+    sub.style.backgroundColor = "#16a085"
+  } else {
+    sub.disabled = true;
+  }
+}

@@ -6,10 +6,11 @@
   <link rel="stylesheet" href="style.css">
   <title>Хобби Полины</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">.
-  <script src="script\hobbies.js"> </script>
+  <script src="script/hobbies.js"> </script>
   <script src="script/submenu.js"></script>
   <script src="script/menu.js"></script>
   <script src="script/clock.js"></script>
+  <script src="script/cookie.js"></script>
 </head>
 
 <body>
@@ -18,14 +19,26 @@
       <div class="nav-menu">
         <li><a href="main.html">Главная страница </a></li>
         <li><a href="aboutme.html">Обо мне </a></li>
-        <script>printMenu()</script>
+        <script>
+          printMenu()
+        </script>
         <li><a href="education.html">Учеба </a></li>
         <li><a href="photoalbum.html">Фотоальбом </a></li>
         <li><a href="contact.html">Контакт </a></li>
         <li><a href="testbjd.html">Тест по дисциплине "Безопасность жизнедеятельности" </a></li>
+        <li><a href="history.html">История посещений </a></li>
       </div>
     </ul>
   </nav>
+  <script>
+    setCookie("hobbies")
+  </script>
+  <script>
+    setLS("hobbies")
+  </script>
+  <script>
+    setLL("hobbies")
+  </script>
   <section>
     <div align=center>
       <h3>Ссылки</h3>
@@ -73,7 +86,9 @@
         </div>
         <div class="doc_time">
           <span id="doc_time"></span>
-          <script>clock();</script>
+          <script>
+            clock();
+          </script>
         </div>
 </body>
 

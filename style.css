@@ -143,7 +143,6 @@ section {
   font-weight: bold;
   width: 550px;
   margin-left: 650px;
-  height: 580px;
 }
 
 .head1 {
@@ -154,10 +153,6 @@ img {
   text-align: center;
 }
 
-table {
-  width: 100%;
-  margin: 40px 20px 20px 40px;
-}
 
 figcaption {
   text-align: center;
@@ -175,4 +170,137 @@ figcaption {
    left: 50%;
    top: 50%;
    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+}
+
+.data table{
+    margin:   2%  2%  6% 104.6%;
+    text-align: center;
+    border: 2px solid #9a89e9;
+    border-radius: 5%;
+    background: white;
+}
+.data td{
+    border-left: 1px solid  #9a89e9;
+    border-bottom: 1px solid  #9a89e9;
+    cursor: pointer;
+}
+[id='calendar'], .div{
+    text-align: center;
+}
+.data select{
+    border-color: #9a89e9;
+}
+
+.notFocus{
+    border-color: #16a085;
+}
+.inFocus{
+    border-color: #9a89e9;
+}
+
+input[type="button"]{
+  margin:  0% 0% 0% 140%;
+    background-color: #9a89e9;
+    border-color: #9a89e9;
+    padding: 1%;
+    color: white;
+    border-radius: 4px;
+}
+
+.no{
+    background-color: lightcoral;
+}
+
+.yes{
+    background-color: lightgreen;
+}
+
+.selectDay{
+    background-color: #9a89e9;
+}
+
+.data select {
+  margin:  2% 0% 0% 104%;
+}
+
+pre{
+    color: lightcoral;
+    display: none;
+}
+
+[id="submit"][disabled = true], [id="submit"][disabled = ""]{
+    background-color: #939394;
+}
+[id="submit"][disabled = false]{
+    background-color: #16a085;
+}
+
+img.inTable{
+    cursor: pointer;
+    text-align: center;
+}
+
+figcaption{
+    text-align: center;
+}
+
+.fotoMax{
+    display: none;
+    position: absolute;
+    top: 0;
+    left:0;
+    /* display:none; */
+    text-align:center;
+    width: 100%;
+    height: 100%;
+}
+.fotoMax img{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 90px 20px #191919;
+}
+.closingDiv{
+    position: absolute;
+    margin: 2% 0 0 85%;
+    width: 30px;
+    height: 25px;
+    color: #16a085;
+    cursor: pointer;
+}
+.closingDiv:after {
+    text-shadow: 0 0 10px 7px rgb(229, 253, 230);
+    content: '\2715';
+}
+
+table
+{
+width: 100%;
+border: 1px solid rgb(230, 230, 230);
+margin: 15px 0px;
+border-bottom-width: 0px;
+}
+
+table th:not(:last-child), table td:not(:last-child)
+{
+border-right: 1px solid rgb(230, 230, 230);
+}
+
+table th
+{
+color: #6a6a6a;
+font-size: 1.2em;
+}
+
+table th, table td
+{
+border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+table td
+{
+text-align: center;
 }

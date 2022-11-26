@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>История посещений</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script/cookie.js"></script>
+  <script src="script/clock.js"></script>
+  <script src="script/submenu.js"></script>
+  <script src="script/menu.js"></script>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <div class="nav-menu">
+        <li><a href="main.html">Главная страница </a></li>
+        <li><a href="aboutme.html">Обо мне </a></li>
+        <script>
+          printMenu()
+        </script>
+        <li><a href="education.html">Учеба </a></li>
+        <li><a href="photoalbum.html">Фотоальбом </a></li>
+        <li><a href="contact.html">Контакт </a></li>
+        <li><a href="testbjd.html">Тест по дисциплине "Безопасность жизнедеятельности" </a></li>
+        <li><a href="history.html">История посещений </a></li>
+      </div>
+    </ul>
+  </nav>
+  <script>
+    setCookie("history")
+  </script>
+  <script>
+    setLS("history")
+  </script>
+  <script>
+    setLL("history")
+  </script>
+  <br />
+  <div class="text">
+    <h1>История посещений</h1>
+  </div>
+  <br />
+  <table>
+    <tr>
+      <td></td>
+      <td>Session storage</td>
+      <td>Local storage</td>
+      <td>Cookie</td>
+    </tr>
+    <tr>
+      <td>Главная</td>
+      <td>
+        <script>
+          getLS("main")
+        </script>
+      </td>
+      <td>
+        <script>
+          getLL("main")
+        </script>
+      </td>
+      <td>
+        <script>
+          getCookie("main")
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>Обо мне</td>
+      <td>
+        <script>
+          getLS("aboutMe")
+        </script>
+      </td>
+      <td>
+        <script>
+          getLL("aboutMe")
+        </script>
+      </td>
+      <td>
+        <script>
+          getCookie("aboutMe")
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>Мои интересы</td>
+      <td>
+        <script>
+          getLS("hobbies")
+        </script>
+      </td>
+      <td>
+        <script>
+          getLL("hobbies")
+        </script>
+      </td>
+      <td>
+        <script>
+          getCookie("hobbies")
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>Галлерея</td>
+      <td>
+        <script>
+          getLS("photoalbum")
+        </script>
+      </td>
+      <td>
+        <script>
+          getLL("photoalbum")
+        </script>
+      </td>
+      <td>
+        <script>
+          getCookie("photoalbum")
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>Учёба</td>
+      <td>
+        <script>
+          getLS("education")
+        </script>
+      </td>
+      <td>
+        <script>
+          getLL("education")
+        </script>
+      </td>
+      <td>
+        <script>
+          getCookie("education")
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>Тест</td>
+      <td>
+        <script>
+          getLS("testbjd")
+        </script>
+      </td>
+      <td>
+        <script>
+          getLL("testbjd")
+        </script>
+      </td>
+      <td>
+        <script>
+          getCookie("testbjd")
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>Контакты</td>
+      <td>
+        <script>
+          getLS("contact")
+        </script>
+      </td>
+      <td>
+        <script>
+          getLL("contact")
+        </script>
+      </td>
+      <td>
+        <script>
+          getCookie("contact")
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>История посещений</td>
+      <td>
+        <script>
+          getLS("history")
+        </script>
+      </td>
+      <td>
+        <script>
+          getLL("history")
+        </script>
+      </td>
+      <td>
+        <script>
+          getCookie("history")
+        </script>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

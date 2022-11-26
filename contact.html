@@ -7,10 +7,12 @@
   <title>Связаться с Полиной по почте</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="script/check.js"></script>
-  <script src="script/submenu.js"></script>
-  <script src="script/menu.js"></script>
   <script src="script/clock.js"></script>
   <script src="script/calendar.js"></script>
+  <script src="script/cookie.js"></script>
+  <script src="script/submenu.js"></script>
+  <script src="script/menu.js"></script>
+
 </head>
 
 <body>
@@ -19,23 +21,36 @@
       <div class="nav-menu">
         <li><a href="main.html">Главная страница </a></li>
         <li><a href="aboutme.html">Обо мне </a></li>
-        <script>printMenu()</script>
+        <script>
+          printMenu()
+        </script>
         <li><a href="education.html">Учеба </a></li>
         <li><a href="photoalbum.html">Фотоальбом </a></li>
         <li><a href="contact.html">Контакт </a></li>
         <li><a href="testbjd.html">Тест по дисциплине "Безопасность жизнедеятельности" </a></li>
+        <li><a href="history.html">История посещений </a></li>
       </div>
     </ul>
   </nav>
-
+  <script>
+    setCookie("contact")
+  </script>
+  <script>
+    setLS("contact")
+  </script>
+  <script>
+    setLL("contact")
+  </script>
   <div class="doc_time">
     <span id="doc_time"></span>
-    <script>clock();</script>
+    <script>
+      clock();
+    </script>
   </div>
 
   <div class="contactform">
 
-    <form method="post" onsubmit="return checkcontact();" action="sent.html">
+    <form onsubmit="return check();" id="contact" onchange="checkSubmit()">
 
       <h2>Форма обратной связи</h2>
 
@@ -46,7 +61,7 @@
 
       <div class="form1">
         <label for="name"> Ваше имя: </label>
-        <input type="text" placeholder="Введите ФИО" id="name">
+        <input type="text" placeholder="Введите ФИО" id="name" onblur="validate(this)"><pre> Некорректное ФИО</pre>
       </div>
 
       <div class="form2">
@@ -57,9 +72,9 @@
 
       <div class="form3">
         <p>Укажите вашу дату рождения</p>
-         <input class="notFocus" name="Дата рождения" type="text" size="35" onfocus="show(this);"
-         oninput="writeDate();" id="birthDate" placeholder="Дата рождения"><br>
-
+      </div>
+      <div id="calendar">
+        <input class="notFocus" data-toggle="popover" data-content="дд.мм.гггг" name="Дата рождения" type="text" size="35" onfocus="show(this)" oninput="writeDate()" id="birthDate" placeholder="Дата рождения"><br>
       </div>
       <div class="form4">
         <p>Напишите сообщение: </p>
@@ -67,16 +82,16 @@
       </div>
       <div class="form5">
         <p>Укажите адрес электронной почты, чтобы я могла вам написать: </p>
-        <input type="text" placeholder="Напишите свой email" id="email">
+        <input type="text" placeholder="Напишите свой email" id="email" onblur="validate(this)"><pre>  Введите свой email</pre>
       </div>
 
       <div class="form6">
         <p>Укажите номер телефона, если что, сможем поболтать: </p>
-        <input type="text" placeholder="Напишите свой номер телефона" id="mobile">
+        <input type="text" placeholder="Напишите свой номер телефона" id="mobile" onblur="validate(this)"><pre>Пример номера телефона: +79781234567</pre>
       </div>
 
       <div class="buttons">
-        <input type="submit" value="Отправить">
+        <input type="submit" id="submit" value="Отправить" disabled=true>
         <input type="reset" value="Очистить форму">
       </div>
     </form>

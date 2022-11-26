@@ -6,40 +6,56 @@
   <link rel="stylesheet" href="style.css">
   <title>Картино4ки Полины</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script\fotos.js"></script>
+  <script src="script/fotos.js"></script>
   <script src="script/submenu.js"></script>
   <script src="script/menu.js"></script>
   <script src="script/clock.js"></script>
+  <script src="script/cookie.js"></script>
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <div class="nav-menu">
-        <li><a href="main.html">Главная страница </a></li>
-        <li><a href="aboutme.html">Обо мне </a></li>
-        <script>printMenu()</script>
-        <li><a href="education.html">Учеба </a></li>
-        <li><a href="photoalbum.html">Фотоальбом </a></li>
-        <li><a href="contact.html">Контакт </a></li>
-        <li><a href="testbjd.html">Тест по дисциплине "Безопасность жизнедеятельности" </a></li>
-      </div>
-    </ul>
-  </nav>
 
-  <div class="headeralb" align=center>
-    <h2>Фотоальбом</h2>
-    <table>
-      <tr>
+  <body id="body">
+    <nav>
+      <ul>
+        <div class="nav-menu">
+          <li><a href="main.html">Главная страница </a></li>
+          <li><a href="aboutme.html">Обо мне </a></li>
+          <script>
+            printMenu()
+          </script>
+          <li><a href="education.html">Учеба </a></li>
+          <li><a href="photoalbum.html">Фотоальбом </a></li>
+          <li><a href="contact.html">Контакт </a></li>
+          <li><a href="testbjd.html">Тест по дисциплине "Безопасность жизнедеятельности" </a></li>
+          <li><a href="history.html">История посещений </a></li>
+        </div>
+      </ul>
+    </nav>
+    <script>
+      setCookie("photoalbum")
+    </script>
+    <script>
+      setLS("photoalbum")
+    </script>
+    <script>
+      setLL("photoalbum")
+    </script>
+    <div class="headeralb" align=center>
+      <h2>Фотоальбом</h2>
+      <table>
+        <tr>
+          <script>
+            fotoTable(3, 4)
+          </script>
+        </tr>
+      </table>
+      <div class="doc_time">
+        <span id="doc_time"></span>
         <script>
-          fotoTable(3, 4)
+          clock();
         </script>
-      </tr>
-    </table>
-    <div class="doc_time">
-      <span id="doc_time"></span>
-      <script>clock();</script>
-    </div>
-</body>
+      </div>
+  </body>
 
 </html>
