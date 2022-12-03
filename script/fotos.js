@@ -1,62 +1,106 @@
 var path = "img/";
 fotos = new Array(
-  path + "Ann.jpg", path + "fly.jpg", path + "sky1.jpg",
-  path + "fog.jpg", path + "randomkit.jpg", path + "sky2.jpg",
-  path + "ija.jpg", path + "randomkitagain.jpg", path + "sky3.jpg",
-  path + "mendKarine.jpg", path + "rinat.jpg", path + "rafulik.jpg"
+  path + "1.jpg", path + "2.jpg", path + "3.jpg",
+  path + "4.jpg", path + "5.jpg", path + "6.jpg",
+  path + "7.jpg", path + "8.jpg", path + "9.jpg",
+  path + "10.jpg", path + "11.jpg", path + "12.jpg"
 );
 
 titles = new Array("Аня", "Флай", "Небо", "Туман", "Кошечка", "Небо №2", "Еда", "Кошечка №2", "Небо №3", "Моя лучшая подруга", "Рука", "Раф");
 
-function fotoTable(n, m) { //i-номер элемента, с которого начнется отображение; n-количество элементов для отображения
-  i = 0;
-  for (j = 0; j < n; j++) {
-    document.write("<tr>");
-    for (k = 0; k < m; k++, i++)
-      document.write("<td> <img class=\"inTable\" src=" + fotos[i] + " alt=" + titles[i] + " title=" + titles[i] + " onClick=\"maxImg(this)\"><figcaption>" + titles[i] + "</figcaption> </td>");
-    document.write("</tr>");
-  }
+function fotoTable (n, m){       //i-номер элемента, с которого начнется отображение; n-количество элементов для отображения
+    i=0;
+    for (j=0; j<n; j++){
+        document.write("<tr>");
+        for (k=0; k<m; k++, i++)
+            document.write("<td> <img id=\"" + i + "\" class=\"inTable\" src=" + fotos[i] + " alt=" + titles[i] + " title=" + titles[i] + " onClick=\"bigFotoDiv(this)\"><figcaption>" + titles[i] + "</figcaption> </td>");
+        document.write("</tr>");
+    }
 }
 
 function maxImg(obj) {
-  // window.open(obj.src, obj.title);
-  var newDiv = document.createElement('div');
-  var closingDiv = document.createElement('div');
-  var picture = document.createElement('img');
+        var newDiv = $('<div>').attr({
+            id: "fotoDiv",
+            class: "fotoMax"
+        })
+        newDiv.css('display', 'block');
+        var picture = $("<img>").attr({
+            id: 'image',
+            src: obj.src,
+            title: obj.title,
+            alt: obj.alt
+        })
+        var closingDiv = $('<div>').attr({
+            class: "closingDiv",
+        }).css('margin-left', '85%');
 
-  function close() {
-    newDiv.style.display = "none";
-    picture.parentElement.remove(picture);
-    closingDiv.parentElement.remove(closingDiv);
-  }
+        closingDiv.click(function(){close()});
 
-  newDiv.style.display = "block";
-  newDiv.id = "fotoDiv";
-  newDiv.className = "fotoMax";
+        function close(){
+            picture.remove();
+            closingDiv.remove();
+            newDiv.remove();
+        }
 
-  picture.src = obj.src;
-  picture.title = obj.title;
-  picture.alt = obj.alt;
-  console.log("picture width = " + picture.width);
-  console.log("screen width = " + screen.width);
+        var width = screen.width, height=screen.height;
+        picture = proportionsPicture(picture);
 
-  var width = screen.width,
-    height = screen.height;
-  var proportion =
-    (picture.width * 100 / width < picture.height * 100 / height) ?
-    picture.height * 100 / height : picture.height * 100 / height; //коэффициент размера относительно окна
-  console.log("proportion = " + proportion);
-  proportion -= 1;
-  picture.width = (picture.width * 70) / proportion; // уменьшаем изображение до 70% от размера экрана
-  picture.height = (picture.height * 70) / proportion;
-  console.log("new picture width = " + picture.width);
+        var nextDiv = $('<div>').attr({
+            id: "next",
+            class: "nextDiv"
+        }).css('margin-left', '88%').append('>');
+        var backDiv = $('<div>').attr({
+            id: "back",
+            class: "backDiv"
+        }).css('margin-left', '10%').append('<');
 
-  closingDiv.className = "closingDiv";
-  closingDiv.style.right = picture.width - 20;
-  closingDiv.onclick = close;
+        newDiv.append(picture);
+        newDiv.append(closingDiv);
+        newDiv.append(nextDiv);
+        newDiv.append(backDiv);
+        newDiv.appendTo($('#body'));
+}
 
+function proportionsPicture(picture){
+    picture.load(function(){
+    var mainHeight = screen.height, mainWidth = screen.width, height=picture.height()-0, width=picture.width()-0;
+    var proportion =
+        (width*100/mainWidth < height*100/mainHeight) ?
+        height*100/mainHeight : width*100/mainWidth;       //коэффициент размера относительно окна
+    proportion -= 1;
+    picture.css('width', (width*70)/proportion);      // уменьшаем изображение до 70% от размера экрана
+    picture.css('height', (height*70)/proportion);
+    });
+    return picture;
+}
 
-  newDiv.appendChild(picture);
-  newDiv.appendChild(closingDiv);
-  document.getElementById("body").appendChild(newDiv);
+function bigFotoDiv(obj){
+    var path = "img/";
+    var index;
+    $(document).ready(function() {
+            maxImg(obj),
+            index = obj.id;
+        $('#back').click(function(){
+            if(index == 0)
+                index = 14;
+            else{
+                index--;
+            }
+            $('#image').attr({
+                src: path+(index+1)+'.jpg',
+                alt: titles[index],
+                title: titles[index]});
+        })
+        $('#next').click(function(){
+            if(index == 14)
+                index = 0;
+            else{
+                index++;
+            }
+            $('#image').attr({
+                src: path+(index+1)+'.jpg',
+                alt: titles[index],
+                title: titles[index]});
+        })
+    })
 }

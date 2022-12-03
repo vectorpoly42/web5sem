@@ -8,8 +8,6 @@ function checkcontact() {
     document.getElementById('mobile')
   ];
 
-  fieldsc.forEach((x) => x.parentNode.style.backgroundColor = null);
-
   var m1 = [];
 
   for (var i = 0; i < fieldsc.length; i++) {
@@ -18,12 +16,10 @@ function checkcontact() {
       if (!fieldsc[1].checked && !fieldsc[2].checked) {
         if (!m1.length) fieldsc[1].focus();
         m1.push(fieldsc[1].name);
-        fieldsc[1].parentNode.style.backgroundColor = 'red';
       }
     } else if (!fieldsc[i].value) {
       if (!m1.length) fieldsc[i].focus();
       m1.push(fieldsc[i].id);
-      fieldsc[i].parentNode.style.backgroundColor = 'red';
     }
   }
 
@@ -32,7 +28,7 @@ function checkcontact() {
     return false;
   }
 
-  return checkName() && checkPhone();
+  return validateAll();
 }
 
 function checktest() {
@@ -74,41 +70,22 @@ function checktest() {
 
 
 function checkName() {
-  var t = document.getElementById('name');
-  t.parentNode.style.backgroundColor = null;
-  var n = 0;
-  var position = 0;
-  while (true) {
-    position = t.value.indexOf(" ", position);
-    if (position < 0) {
-      break;
-    } else {
-      ++position;
-      n++;
-    }
-  }
-  if (n !== 2) {
-    alert("Некорректное ФИО.");
-    t.parentNode.style.backgroundColor = 'red';
-    return false;
-  }
-
-  return true;
+  return document.getElementById('name').value.trim().split(' ').length > 2;
 }
 
 function checkPhone() {
   var t = document.getElementById('mobile');
-  t.parentNode.style.backgroundColor = null;
   var flag = false;
   if (t.value.length === 10 || t.value.length === 12)
     if (t.value.indexOf("+", 0) === 0 && (t.value.indexOf("7", 0) === 1 || t.value.indexOf("3", 0) === 1)) flag = true;
   if (!flag) {
-    alert("Некорректный номер телефона");
-    t.parentNode.style.backgroundColor = 'red';
     return false;
   }
-
   return true;
+}
+
+function checkEmail() {
+  return /\S+@\S+\.\S+/.test(document.getElementById('email').value);
 }
 
 function amountWords() {
@@ -125,60 +102,18 @@ function amountWords() {
   return true;
 }
 
+function validate(elem, validateFunc) {
+  if (validateFunc()) {
+      elem.className = "yes";
+      elem.nextSibling.style.display = "none";
+    } else {
+      elem.className = "no";
+      elem.nextSibling.style.display = "inline";
+    }
+}
+
 function validateAll() {
-
-  var string = checkcontact() + checkName() + checkPhone();
-  console.log(string);
-  if (string === "" || string === "\n\n") return true;
-  else return false;
-}
-
-function check() {
-  if (validateAll()) {
-    return true;
-  } else {
-    alert(string);
-    return false;
-  }
-}
-
-function validate(elem) {
-  var pree = document.getElementsByTagName('pre');
-  switch (elem.id) {
-    case "name":
-      if (checkName() != "\n") {
-        elem.className = "no";
-        pree[0].style.display = "inline";
-      } else {
-        elem.className = "yes";
-        pree[0].style.display = "none";
-      }
-      break
-    case "email":
-
-      if (elem.value === "") {
-        elem.className = "no";
-        pree[1].style.display = "inline";
-      } else {
-        elem.className = "yes";
-        pree[1].style.display = "none";
-      }
-      break
-    case "mobile":
-      if (checkPhone() !== "") {
-        elem.className = "no";
-        pree[2].style.display = "inline";
-      } else {
-        elem.className = "yes";
-        pree[2].style.display = "none";
-      }
-      break
-
-  }
-  var e1 = document.getElementById("name").className;
-  var e2 = document.getElementById("email").className;
-  var e3 = document.getElementById("mobile").className;
-  var s = document.getElementById("submit");
+  return checkName() && checkPhone() && checkEmail();
 }
 
 function checkSubmit() {
