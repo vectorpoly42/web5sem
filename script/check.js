@@ -104,12 +104,12 @@ function amountWords() {
 
 function validate(elem, validateFunc) {
   if (validateFunc()) {
-      elem.className = "yes";
-      elem.nextSibling.style.display = "none";
-    } else {
-      elem.className = "no";
-      elem.nextSibling.style.display = "inline";
-    }
+    elem.className = "yes";
+    elem.nextSibling.style.display = "none";
+  } else {
+    elem.className = "no";
+    elem.nextSibling.style.display = "inline";
+  }
 }
 
 function validateAll() {
