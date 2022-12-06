@@ -247,27 +247,6 @@ figcaption {
   text-align: center;
 }
 
-.fotoMax {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* display:none; */
-  text-align: center;
-  width: 100%;
-  height: 100%;
-}
-
-.fotoMax img {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  box-shadow: 0 0 90px 20px #191919;
-}
-
 .closingDiv {
   position: absolute;
   margin: 2% 0 0 85%;
@@ -282,6 +261,7 @@ figcaption {
   content: '\2715';
 }
 
+/*история посещений и другие таблицы*/
 table {
   width: 100%;
   border: 1px solid rgb(230, 230, 230);
@@ -306,6 +286,7 @@ table td {
   text-align: center;
 }
 
+/*вывод списка ссылок моих хобби*/
 .nav>ul>li>a:hover,
 .nav>ul>li>a:focus {
   color: white;
@@ -318,10 +299,11 @@ ul[id="submenu"] li a:hover {
   padding-left: 10px;
 }
 
+/*вывод фоток со стрелками 4 лр*/
 .nextDiv, .backDiv{
     border-radius: 50%;
-    font-size: 42px;
-    background: rgba(57, 119, 72, 0.85);
+    font-size: 36px;
+    background: #6495ED;
     position: absolute;
     color:  white;
     width: 50px;
@@ -332,6 +314,28 @@ ul[id="submenu"] li a:hover {
     box-shadow:  0 0 20px 7px white;
 }
 
+.fotoMax {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display:none; */
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.fotoMax img {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 90px 20px #191919;
+}
+
+/*подсказки*/
 .popover {
     position: absolute;
     top: 0;
@@ -432,6 +436,7 @@ ul[id="submenu"] li a:hover {
     border-right-width: 0;
   }
 
+/*модальное окно*/
 [id="modalWindow"] {
 	display: none;
 }
